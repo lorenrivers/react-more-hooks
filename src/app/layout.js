@@ -2,6 +2,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import { UserProvider } from "@/app/Context/UserContext";
 import { ThemeProvider } from "@/app/Context/ThemeContext";
+import Link from "next/link";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -15,7 +16,16 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <UserProvider>
         <ThemeProvider>
-          <body className={inter.className}>{children}</body>
+          <body className={inter.className}>
+            <h1 className="flex justify-center my-5 font-extrabold">
+              Workshops on Some Additional React Hooks
+            </h1>
+            <nav className="flex gap-10 justify-center my-5">
+              <Link href="/">useReducer Hook</Link>
+              <Link href="/use-context">useContext Hook</Link>
+            </nav>
+            {children}
+          </body>
         </ThemeProvider>
       </UserProvider>
     </html>

@@ -18,13 +18,22 @@ export default function UseContextHook() {
 
   return (
     <div>
-      <h2>Example of using useContext react hook:</h2>
-      <p>User ID: {username}</p>
-      <button onClick={() => setUsername("Tim")}>
+      <h2 className="m-5 font-bold">useContext</h2>
+      <h2 className="m-3">Examples of using useContext react hook:</h2>
+      <p className="m-3">User ID: {username}</p>
+      <button
+        onClick={() => setUsername("Tim")}
+        className="m-3 rounded border-double border-4 border-black p-2 hover:border-dotted"
+      >
         Change the username to Tim
       </button>
-      <h3>Theme: {theme}</h3>
-      <button onClick={handleThemeToggle}>Change theme to dark</button>
+      <h3 className="m-3">Theme: {theme}</h3>
+      <button
+        onClick={handleThemeToggle}
+        className="m-3 rounded border-double border-4 border-black p-2 hover:border-dotted"
+      >
+        Change theme to dark
+      </button>
     </div>
   );
 }
